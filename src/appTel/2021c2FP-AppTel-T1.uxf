@@ -1,0 +1,35 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>20</x><y>60</y><w>380</w><h>190</h></coordinates><panel_attributes>Telefono
+--
+- version: int
+- capacidad: double
+--
++ gestionarAplicaciones(ArrayList&lt;Aplicacion&gt;):ArrayList&lt;Resultado&gt;
+- calcularEspacioOcupado(): double
+- chequearEspacio(double): boolean
+- buscarAplicacion(String): Aplicacion</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>310</y><w>210</w><h>190</h></coordinates><panel_attributes>Aplicacion
+--
+- nombre: String
+- version: int
+- espacio: double
+- versionSO: int
+
+--
++ getEspacioTotal(): double
++ esVersionSuperior(): boolean
++ cargarConfiguracion(Aplicacion): void
+- getConfiguraciones(): ArrayList&lt;Configuracion&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>310</y><w>210</w><h>190</h></coordinates><panel_attributes>Configuracion
+--
+- idDato: String
+- dato: Object
+- tamanio: double
+--
++ getTamanio(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>320</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Resultado
+--
++ INSTALACION_OK
++ ACTUALIZACION_OK
++ ESPACIO_INSUFICIENTE
++ VERSION_INCORRECTA
++ VERSION_NO_SUPERIOR</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>240</y><w>160</w><h>210</h></coordinates><panel_attributes>lt=&lt;-
+- aplicaciones</panel_attributes><additional_attributes>140;190;10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>380</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+- configuraciones</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>240</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element></diagram>

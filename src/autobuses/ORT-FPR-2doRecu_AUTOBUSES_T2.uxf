@@ -1,0 +1,54 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>60</y><w>280</w><h>200</h></coordinates><panel_attributes>Reparadora
+--
+
+
+
+
+
+--
++ Reparadora()
++ completarAutobus(Autobus):ArrayList&lt;Asiento&gt;
+- rescatarAsientosBuenos(int):ArrayList&lt;Asiento&gt;
+- obtenerInforme():ArrayList&lt;Informe&gt;
++ mostrarInforme():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>60</y><w>290</w><h>190</h></coordinates><panel_attributes>Autobus
+--
+- patente: String
+- cantAsientos: int
+
+--
++ quitarAsientosMalEstado():ArrayList&lt;Asiento&gt;
++ estasCompletoBuenEstado():boolean
++ dameCantidadFaltantes():int
++ dameAsientosBuenos(int,ArrayList&lt;Asiento&gt;):void
+- colocarAsientos(ArrayList&lt;Asiento&gt;):void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>330</y><w>210</w><h>100</h></coordinates><panel_attributes>Asiento
+--
+
+
+--
++ estasSano():boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>330</y><w>210</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Estado
+--
++ SANO
++ REPARABLE
++ DESCARTABLE
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>360</y><w>90</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- estado</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>240</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*
+- asientos</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>220</y><w>150</w><h>130</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>130;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>120</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*
+- autobusesVenta</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>330</y><w>150</w><h>100</h></coordinates><panel_attributes>Informe
+--
+- patente: String
+- cantFaltantes: int
+
+--
++ Informe(String,int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>160</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*
+- autobusesRotos</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>250</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element></diagram>
