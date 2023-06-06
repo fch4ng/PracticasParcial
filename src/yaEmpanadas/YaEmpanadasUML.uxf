@@ -1,0 +1,38 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>110</x><y>290</y><w>300</w><h>190</h></coordinates><panel_attributes>Pedido
+--
+-numeroDePedido: int
+-numeroDeTelefono: String
+-domicilio: String
+-items: ArrayList&lt;Items&gt; 
+--
++crearORecuperarPedido(String, String): int
++cargarEmpanada(int, TipoDeEmpanada, int): void
++listarPedidoCompleto(int): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>610</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;enum&gt;
+TipoDeEmpanada
+--
++CARNE
++POLLO
++JAMONYQUESO
++VERDURA
++HUMITA
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>290</y><w>210</w><h>190</h></coordinates><panel_attributes>Item
+--
+-cantidadDeEmpanadas: int
+
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>350</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-items
+m1=0..n</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>470</y><w>130</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+-tipoDeEmpanada
+m1=0..n</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>10</y><w>210</w><h>190</h></coordinates><panel_attributes>YaEmpanadas
+--
+-pedidos: ArrayList&lt;Pedido&gt;
+--
++yaEmpanadas():void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>190</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+-pedidos
+m1=0..n</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element></diagram>
