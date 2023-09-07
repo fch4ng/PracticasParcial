@@ -1,4 +1,4 @@
-package piedraPapelTijera;
+package piedraPapelTijera;//trabado en loop piendo seleccion de Ana
 
 import java.util.Scanner;
 
