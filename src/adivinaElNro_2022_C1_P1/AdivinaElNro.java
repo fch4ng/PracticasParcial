@@ -1,4 +1,4 @@
-package adivinaElNro_2022_C1_P1;
+package adivinaElNro_2022_C1_P1;//revisar porque no hace break para pedir ambos nombres por separado
 
 import java.util.Scanner;
 import java.util.Random;
@@ -45,7 +45,7 @@ public class AdivinaElNro {
 		
 			for(int x = 1; x < 3; x++){
 				
-				System.out.println("Ingrese el nombre del jugador" + x);
+				System.out.println("Ingrese el nombre del jugador " + x);//no corta para pedir nombres de jugadores por separado
 				nombreJugador = input.nextLine();
 				
 					if(x == UNO) {
