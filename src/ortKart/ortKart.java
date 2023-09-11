@@ -57,7 +57,7 @@ public class ortKart {
 				
 		}while(TOTALVUELTAS != acumuladorVueltas || kartX != FIN );
 		
-			if(TOTALVUELTAS < 5) {
+			if(kartX != FIN) {
 				
 				System.out.println("Indefinido");
 				
@@ -71,7 +71,7 @@ public class ortKart {
 				
 			}
 			
-			if(TOTALVUELTAS < 5) {
+			if(kartX != FIN) {
 				
 				System.out.println("Indefinido");
 				
