@@ -1,4 +1,4 @@
-package ejCaminones;
+package caminones;
 
 import java.util.ArrayList;
 

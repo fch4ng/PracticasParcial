@@ -1,4 +1,4 @@
-package primerParcial;
+package registroTemperatura;
 
 import java.util.Scanner;
 

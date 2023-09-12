@@ -1,4 +1,4 @@
-package fp_1_parcial;//no corta con el -1 falta agregar un ciclo 
+package registroMarea;//no corta con el -1 falta agregar un ciclo 
 
 import java.util.Scanner;
 

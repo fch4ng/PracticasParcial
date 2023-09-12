@@ -1,3 +1,4 @@
+package casino;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package ejDroide;
+package droide;
 
 public class Test {
 

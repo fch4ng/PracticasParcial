@@ -1,4 +1,4 @@
-package ejDroide;
+package droide;
 
 import java.util.ArrayList;
 

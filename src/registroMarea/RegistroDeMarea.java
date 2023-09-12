@@ -1,4 +1,4 @@
-package ejBootCamp1Parcial;
+package registroMarea;
 
 public class RegistroDeMarea {
 	

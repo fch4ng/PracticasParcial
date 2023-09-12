@@ -1,4 +1,4 @@
-package simulacro;
+package consultaPopular;
 import java.util.Scanner;
 
 public class ConsultaPopular {

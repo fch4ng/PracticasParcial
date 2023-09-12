@@ -1,4 +1,4 @@
-package ejCaminones;
+package caminones;
 
 public class Paquete {
 	

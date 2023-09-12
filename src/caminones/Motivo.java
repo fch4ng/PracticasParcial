@@ -1,4 +1,4 @@
-package ejCaminones;
+package caminones;
 
 public enum Motivo {
 	NO_HAY_CAMION_ASIGNADO,

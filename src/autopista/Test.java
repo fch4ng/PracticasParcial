@@ -1,4 +1,4 @@
-package ejAutopista;
+package autopista;
 
 import java.util.Scanner;
 
