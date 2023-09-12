@@ -9,7 +9,7 @@ public class registroMarea {
 
 	public static void main(String[] args) {
 		
-		final double FIN = 0;
+		final double FIN = -1;
 		int fecha;
 		double mareaMinima;
 		double mareaMaxima;
@@ -28,7 +28,7 @@ public class registroMarea {
   		
   		fechaAntecedente = fecha;
   		
-  		while(FIN < fecha){
+  		while(fecha != FIN){
 													
 						
 				System.out.println("Ingrese altura de marea minima de la fecha (en metros y con decimales)");

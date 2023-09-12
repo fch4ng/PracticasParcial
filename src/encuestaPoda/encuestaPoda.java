@@ -1,3 +1,4 @@
+package encuestaPoda;
 import java.util.Scanner;
 
 public class encuestaPoda {
