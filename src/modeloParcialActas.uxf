@@ -1,0 +1,54 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>260</x><y>40</y><w>240</w><h>200</h></coordinates><panel_attributes>Materia
+--
+-nombre: String
+
+--
++Materia(String)
+-precargarAlumnos():void
++buscarAlumnoPorDni(int): Alumno
++actualizarNota(int, int): Resultado
++borrarActas(): void
+-generarActas(): Acta
++emitirResumen(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>60</y><w>210</w><h>190</h></coordinates><panel_attributes>Acta
+--
+
+--
++Acta(Categoria)
++getCategoria(): Categoria
+-setCategoria(Categoria): void
++contarAlumnos(): int
++agregarAlumno(Alumno): void
++borrarAlumnos(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>510</y><w>210</w><h>190</h></coordinates><panel_attributes>Alumno
+--
+-dni: int
+-esLibre: boolean
+-notaFinal: int
+--
++Alumno()
++getDni(): int
+-setDni(int): void
++getEsLibre(): boolean
+-setEsLibre(boolean): void
+-getNotaFinal(): int
+-setNotaFinal(int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>510</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;enums&gt;
+Categoria
+--
+_+RECUPERATORIO_
+_+FINAL_LARGO_
+_+FINAL_CORTO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>510</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;enums&gt;
+Resultado
+--
+_+DNI_INEXISTENTE_
+_+NOTA_FUERA_DE_RANGO_
+_+NO_ACTUALIZABLE_
+_+ACTUALIZACION_OK_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>240</y><w>130</w><h>290</h></coordinates><panel_attributes>lt=&lt;-
+-categoriaExamen
+m1=1</panel_attributes><additional_attributes>10;270;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>240</y><w>290</w><h>290</h></coordinates><panel_attributes>lt=&lt;-
+-alumnosCategoria
+m1=0..n</panel_attributes><additional_attributes>10;270;270;10</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>230</y><w>190</w><h>300</h></coordinates><panel_attributes>lt=&lt;-
+-alumnosMateria
+m1=0..n</panel_attributes><additional_attributes>140;280;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>230</y><w>130</w><h>300</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;280;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>130</y><w>400</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-actas
+m1=0..</panel_attributes><additional_attributes>380;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>220</y><w>440</w><h>310</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>420;290;10;10</additional_attributes></element></diagram>

@@ -1,0 +1,53 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>420</x><y>80</y><w>310</w><h>190</h></coordinates><panel_attributes>Materia
+--
+-String: nombre
+--
+-precargarAlumnos(): ArrayList&lt;Alumno&gt; alumnos
++Materia(String):
++destruirActa(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>390</y><w>210</w><h>190</h></coordinates><panel_attributes>Padron
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>680</y><w>210</w><h>190</h></coordinates><panel_attributes>Acta
+--
+
+--
+-generarActa(): void 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>670</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;enum&gt;
+Categoria de Examen
+--
+_RECUPERATORIO_
+_FINAL LARGO_
+_FINAL CORTO_
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>680</y><w>190</w><h>190</h></coordinates><panel_attributes>Alumno
+--
+-int: dni
+-boolean: cuatriMestreAnterior
+-int: notaFinalCursada
+--
++actualizarNota(int, int):
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>170</y><w>240</w><h>530</h></coordinates><panel_attributes>lt=&lt;-
+-alumno
+m1=0..n</panel_attributes><additional_attributes>170;510;170;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>680</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;enum&gt;
+Resultado Actualizar Nota
+--
+_DNI_INEXISTENTE_
+_NOTA_FUERA_DE_RANGO_
+_NO_ACTUALIZABLE_
+_ACTUALIZACION_OK_
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>260</y><w>70</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+-padron
+m1=0..n</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>460</y><w>260</w><h>240</h></coordinates><panel_attributes>lt=&lt;-
+-alumno
+m1=0..n</panel_attributes><additional_attributes>220;220;220;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>720</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-categoria de examen
+m1=0..n</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>970</x><y>730</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-resultado actualizar nota
+m1=0..n</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>730</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-alumno
+m1=0..n</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element></diagram>
