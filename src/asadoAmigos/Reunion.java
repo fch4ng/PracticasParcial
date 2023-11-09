@@ -1,4 +1,4 @@
-package parcial_2.clases;
+package asadoAmigos;
 
 import java.util.ArrayList;
 
@@ -10,6 +10,9 @@ public class Reunion {
 
 	public Reunion(String tema) {
 		// TODO - Completar constructor
+		this.motivo = tema;
+		this.amigos = new ArrayList<>();
+		this.propuestasExistentes = new ArrayList<>();
 	}
 
 	public ResultadoOperacion anotarAmigo(String nombre, String domicilio) {
@@ -24,11 +27,25 @@ public class Reunion {
 
 	private ResultadoOperacion bajarDePropuesta(Amigo amigo, DiaSemana diaSemana, MomentoDia momento) {
 		// TODO - Completar la baja de un amigo de una propuesta.
-		/*
-		 * Si la propuesta quedara sin ningun amigo, eliminarla de la coleccion de
+		/* Si la propuesta quedara sin ningun amigo, eliminarla de la coleccion de
 		 * propuestas existentes.
 		 */
-		return null; // <- puesto para que no de error, reemplazar por lo que corresponda
+		ResultadoOperacion res = ResultadoOperacion.PROPUESTA_NO_EXISTENTE;
+		
+		PropuestaReunion propuestaAmigoBajar = buscarPropuesta(diaSemana, momento);
+			
+			if(propuestaAmigoBajar != null) {
+				
+				res = propuestaAmigoBajar.borrarAmigo(amigo); 
+				
+				if(propuestaAmigoBajar.sinAnotados() && res == ResultadoOperacion.OPERACION_OK) {
+					
+					this.propuestasExistentes.remove(propuestaAmigoBajar);
+				}
+			}
+		
+			
+		return res; // <- puesto para que no de error, reemplazar por lo que corresponda
 	}
 
 	public ResultadoOperacion bajarDePropuesta(String nombre, DiaSemana diaSemana, MomentoDia momento) {
@@ -54,6 +71,13 @@ public class Reunion {
 	private PropuestaReunion buscarPropuesta(DiaSemana diaSemana, MomentoDia momento) {
 		PropuestaReunion propuesta = null;
 		// TODO - Completar busqueda de la propuesta
+		int pos = 0;
+		while (pos < propuestasExistentes.size() && !propuestasExistentes.get(pos).mismaPropuesta(diaSemana, momento)) {
+			pos++;
+		}
+		if (pos < propuestasExistentes.size())
+			propuesta = propuestasExistentes.get(pos);
+		
 		return propuesta;
 	}
 
@@ -90,6 +114,8 @@ public class Reunion {
 		 * Debe mostrar los nombres de aquellos amigos que no se han adherido a ninguna
 		 * de las propuestas existentes (ni propia ni ajena).
 		 */
+		listarAmigosFaltantes();
+		
 		System.out.println();
 	}
 
@@ -107,6 +133,32 @@ public class Reunion {
 		}		
 	}
 
+	private void listarAmigosFaltantes() {
+		ArrayList<Amigo> amigosFaltantes = new ArrayList<>();
+		boolean figuraEnPropuesta = false;
+		int index = 0;
+		PropuestaReunion propuestaBuscada;
+		for (Amigo amigo: amigos) {
+			figuraEnPropuesta = false;
+			while( !figuraEnPropuesta && index < this.propuestasExistentes.size()) {
+				propuestaBuscada = this.propuestasExistentes.get(index);
+				if (propuestaBuscada.estaAnotado(amigo)) {
+					figuraEnPropuesta = true;
+				} else {
+					index++;
+				}
+			}
+			if(!figuraEnPropuesta) {
+				amigosFaltantes.add(amigo);
+			}
+		}
+		
+		System.out.println("Amigos sin registrarse en ningun evento");
+		for (Amigo amigoSinReunion : amigosFaltantes) {
+			System.out.println(amigoSinReunion.getNombre());
+		}	
+	}
+	
 	private ResultadoOperacion unirAPropuesta(DiaSemana diaSemana, MomentoDia momento, Amigo amigo) {
 		ResultadoOperacion res = ResultadoOperacion.PROPUESTA_NO_EXISTENTE;
 		PropuestaReunion fechaReunion = buscarPropuesta(diaSemana, momento);
@@ -118,7 +170,12 @@ public class Reunion {
 
 	public ResultadoOperacion unirAPropuesta(DiaSemana diaSemana, MomentoDia momento, String nombre) {
 		// TODO - Completar el agregado de un amigo a una propuesta existente
-		return null; // <- puesto para que no de error, reemplazar por lo que corresponda
+		Amigo amigo = buscarAmigo(nombre);
+		ResultadoOperacion resultado = ResultadoOperacion.AMIGO_NO_EXISTENTE;
+		if (amigo != null) {			
+			resultado = this.unirAPropuesta(diaSemana, momento, amigo);
+		}
+		return resultado; // <- puesto para que no de error, reemplazar por lo que corresponda
 	}
 
 }

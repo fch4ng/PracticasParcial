@@ -1,4 +1,4 @@
-package parcial_2.clases;
+package asadoAmigos;
 
 public enum DiaSemana {
 	DOMINGO, LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO

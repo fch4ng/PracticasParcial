@@ -1,0 +1,24 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>180</x><y>30</y><w>310</w><h>190</h></coordinates><panel_attributes>ORTSoulMate
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>350</y><w>310</w><h>190</h></coordinates><panel_attributes>Persona
+--
+-nombre: String
+-edad: int
+-email: String
+-presentacion: String
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>350</y><w>310</w><h>190</h></coordinates><panel_attributes>Gusto
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>600</y><w>310</w><h>190</h></coordinates><panel_attributes>&lt;enum&gt;
+Tipo
+--
+_+OBLIGATORIO_
+_+DESEABLE_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>210</y><w>60</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+-Array
+m1=0..n</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element></diagram>

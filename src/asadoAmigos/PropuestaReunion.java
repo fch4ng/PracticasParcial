@@ -1,4 +1,4 @@
-package parcial_2.clases;
+package asadoAmigos;
 
 import java.util.ArrayList;
 
@@ -10,8 +10,12 @@ public class PropuestaReunion {
 
 	public PropuestaReunion(DiaSemana diaSemana, MomentoDia momentoDia) {
 		// TODO - Completar constructor
+		this.diaSemana = diaSemana;
+		this.momentoDia = momentoDia;
+		this.anotados = new ArrayList<>();
+		
 	}
-
+	
 	public ResultadoOperacion anotarAmigo(Amigo amigoAAnotar) {
 		ResultadoOperacion res = ResultadoOperacion.AMIGO_YA_EXISTENTE;
 		if (!estaAnotado(amigoAAnotar)) {
@@ -30,7 +34,7 @@ public class PropuestaReunion {
 		return res;
 	}
 
-	private boolean estaAnotado(Amigo amigoABuscar) {
+	public boolean estaAnotado(Amigo amigoABuscar) {
 		int pos = 0;
 		while (pos < anotados.size() && !anotados.get(pos).equals(amigoABuscar)) {
 			pos++;

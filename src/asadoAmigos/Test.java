@@ -1,9 +1,4 @@
-package parcial_2;
-
-import parcial_2.clases.DiaSemana;
-import parcial_2.clases.MomentoDia;
-import parcial_2.clases.ResultadoOperacion;
-import parcial_2.clases.Reunion;
+package asadoAmigos;
 
 public class Test {
 
