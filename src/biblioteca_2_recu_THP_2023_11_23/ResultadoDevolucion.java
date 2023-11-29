@@ -1,0 +1,12 @@
+package biblioteca_2_recu_THP_2023_11_23;
+
+public enum ResultadoDevolucion {
+	
+	LIBRO_INEXISTENTE, 
+	EJEMPLAR_INEXISTENTE,
+	EJEMPLAR_NO_PRESTADO,
+	SOCIO_INEXISTENTE, 
+	SOCIO_SIN_EJEMPLAR, 
+	DEVOLUCION_OK
+
+}
