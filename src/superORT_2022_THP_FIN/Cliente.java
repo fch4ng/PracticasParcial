@@ -146,7 +146,7 @@ public class Cliente {
 		
 		String nombreCompleto = null;
 		
-		nombreCompleto = getNombre() + getApellido();
+		nombreCompleto = getNombre()+ " " + getApellido();
 		
 		return nombreCompleto;
 	}

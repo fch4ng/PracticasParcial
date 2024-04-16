@@ -158,5 +158,10 @@ public class SuperOrt {
 	}
 	
 	
+	public void mostrarMejoresClientes() {
+		for (MejorCliente cliente : obtenerClientesMayorCompra()) {
+			System.out.println(cliente.getNombreCompleto());
+		}
+	}
 	
 }

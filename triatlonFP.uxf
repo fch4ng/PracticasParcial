@@ -1,0 +1,39 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>450</x><y>40</y><w>210</w><h>190</h></coordinates><panel_attributes>Triatlon
+--
+
+--
++Triatlon():
++inscripcionAtleta(Atleta):void
++cierreInscripcionAtleta():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>360</y><w>210</w><h>190</h></coordinates><panel_attributes>Atleta
+--
+-codigo: String
+-nombreCompleto: String
+-abandonoCarrera: boolean = false
+--
++Atleta(String, String):</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>700</y><w>210</w><h>190</h></coordinates><panel_attributes>Tiempo
+--
+-hora: int
+-minuto: int
+-segundo: int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>360</y><w>210</w><h>190</h></coordinates><panel_attributes>Carrera
+--
+
+--
++Carrera():</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1030</x><y>360</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;enum&gt;
+Disciplina
+--
+_NATACION_
+_CICLISMO _
+_CARRERA _
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>220</y><w>160</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+-atletas
+m1=0..n</panel_attributes><additional_attributes>10;140;10;60;140;60;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>220</y><w>270</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+-carreras
+m1=0..n</panel_attributes><additional_attributes>230;140;230;70;10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>540</y><w>80</w><h>180</h></coordinates><panel_attributes>lt=&lt;-
+-tiempos
+m1=0..3</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>440</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;10;170;10</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>440</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-disciplinas
+m1=0..3</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element></diagram>

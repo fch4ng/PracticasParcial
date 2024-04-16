@@ -9,26 +9,22 @@ public class Test {
 
 	public static void main(String[] args) {
 		miSuper = new SuperOrt();
-		agregarProducto("LIM0001", "Balde plastico 15 litros", 1190.0);
-		agregarProducto("LIM0002", "Lampazo MOP algodon", 789.0);
+		//agregarProducto("LIM0001", "Balde plastico 15 litros", 1190.0);
+		//agregarProducto("LIM0002", "Lampazo MOP algodon", 789.0);
 		agregarProducto("ALM0001", "Arroz blanco grano largo 1 Kg", 453.5);
-		agregarProducto("ALM0001", "Arroz blanco grano largo 1 Kg", 453.5);
+		//agregarProducto("ALM0001", "Arroz blanco grano largo 1 Kg", 453.5);
 		agregarCliente("98765432", "Perico", "Perez");
-		agregarCliente("20202020", "Dany", "Vazquez");
+		//agregarCliente("20202020", "Dany", "Vazquez");
 		agregarAlCarrito("98765432", "ALM0001", 8);
-		agregarAlCarrito("19876542", "ALM0001", 1);
-		agregarAlCarrito("20202020", "LIM0001", 1);
-		agregarAlCarrito("20202020", "LIM0002", 2);
-		agregarAlCarrito("98765432", "LIM0005", 5);
-		mostrarMejoresClientes();
+		//agregarAlCarrito("19876542", "ALM0001", 1);
+		//agregarAlCarrito("20202020", "LIM0001", 1);
+		//agregarAlCarrito("20202020", "LIM0002", 2);
+		//agregarAlCarrito("98765432", "LIM0005", 5);
+		miSuper.mostrarMejoresClientes();
 	}
 
-	private static void mostrarMejoresClientes() {
-		for (MejorCliente cliente : miSuper.obtenerClientesMayorCompra()) {
-			System.out.println(cliente.getNombreCompleto());
-		}
-
-	}
+	
+	
 
 	private static void agregarAlCarrito(String dniCliente, String codigoDeProducto, int cantidad) {
 		System.out.println("Agregando algo al carrito de compras de un cliente");
